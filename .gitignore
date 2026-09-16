@@ -1,0 +1,36 @@
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.token
+secrets/
+credentials/
+
+# SSH
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+
+# Backups / exports
+*.bak
+*.backup
+*.dump
+*.tar
+*.tar.gz
+*.zip
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
