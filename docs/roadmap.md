@@ -90,3 +90,13 @@
 - [ ] Summarize alerts and incidents
 - [ ] Correlate DNS, firewall, Zeek, Suricata, and Wazuh data
 - [ ] Keep remediation human-approved initially
+
+## Remote exit node milestone
+
+I added a working Tailscale exit node to linux01 so my school laptop can use my home internet connection without requiring download storage on the Proxmox host.
+
+**Completed:** Enabled persistent IPv4 and IPv6 forwarding, verified Tailscale managed NAT, approved the exit node, confirmed home internet egress, preserved SSH and Proxmox management access during testing, and demonstrated an automatic rollback of experimental firewall rules.
+
+**Remaining:** Verify least privilege tailnet grants, complete and test isolation from the home LAN, check application binding during VPN disconnection, and document any future network changes that affect the IPv6 prefix.
+
+This work supports Phase 2 remote access, introduces practical Phase 3 routing and firewall skills, and provides material for Phase 8 automation without changing the planned deployment order.
