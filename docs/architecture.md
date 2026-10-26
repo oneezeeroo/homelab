@@ -72,3 +72,23 @@ Application authentication
 - Isolated testing
 
 The physical VLAN rollout will happen only after the design has been tested virtually.
+
+## Remote internet gateway
+
+linux01 now advertises an approved Tailscale exit node. A remote laptop can choose it for internet routing and continue storing downloads locally. The VM forwards traffic to the home router; it is not a download server or storage share.
+
+```text
+Remote laptop
+      |
+Tailscale tunnel
+      |
+linux01 on PVE01
+      |
+Home gateway
+      |
+Internet
+```
+
+The laptop can deselect the exit node for normal routing without losing direct Tailscale access to the lab. This design avoids adding another workload or storage requirement to the OptiPlex.
+
+The connection and management access have been verified. An experimental firewall table was removed after a successful rollback test. Complete home LAN isolation and final tailnet access restrictions still require verification. See [the project notes](remote-exit-node.md).
