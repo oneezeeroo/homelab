@@ -35,3 +35,11 @@ Remote administration currently uses Tailscale. Public Internet exposure of hype
 - `configs/` — sanitized configuration examples only
 
 > This repository is public. Do not commit passwords, API keys, private keys, recovery codes, Tailscale auth keys, tokens, or other secrets.
+
+## Remote internet access
+
+I configured linux01 as a Tailscale exit node so I can use my home internet connection from the school laptop while saving files directly on the laptop. This builds on the existing remote administration setup and gives me practical experience with routing, NAT, and firewall recovery.
+
+The connection was tested successfully using the home public IP. Complete isolation of the home LAN is still unfinished and should not be considered verified.
+
+See [the project notes](docs/remote-exit-node.md) and [the operating runbook](runbooks/tailscale-exit-node.md) for the implementation, validation, limitations, and routine operation.
